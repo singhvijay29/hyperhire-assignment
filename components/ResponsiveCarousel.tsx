@@ -8,7 +8,16 @@ import {
 } from "react-stacked-center-carousel";
 import ProfileCard from "@/components/Carousel/ProfileCard";
 
-export const data = [
+interface DataItem {
+  name: string;
+  role: string;
+  experience: string;
+  skills: string[];
+  profileImage: string;
+  flagImage: string;
+}
+
+export const data: DataItem[] = [
   {
     name: "Abhishek Gupta",
     role: "마케팅",
@@ -57,7 +66,7 @@ export const data = [
 ];
 
 export default function ResponsiveCarousel() {
-  const ref = useRef();
+  const ref = useRef<any>();
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 768px)",
   });
@@ -100,7 +109,6 @@ export default function ResponsiveCarousel() {
                 left: "-10px",
                 zIndex: 10,
               }}
-              size="small"
               color="primary"
               onClick={() => {
                 ref.current?.goBack();
@@ -115,7 +123,6 @@ export default function ResponsiveCarousel() {
                 right: "-10px",
                 zIndex: 10,
               }}
-              size="small"
               color="primary"
               onClick={() => {
                 ref.current?.goNext(6);
@@ -153,7 +160,6 @@ export default function ResponsiveCarousel() {
                 left: "44px",
                 zIndex: 10,
               }}
-              size="small"
               color="primary"
               onClick={() => {
                 ref.current?.goBack();
@@ -168,7 +174,6 @@ export default function ResponsiveCarousel() {
                 right: "44px",
                 zIndex: 10,
               }}
-              size="small"
               color="primary"
               onClick={() => {
                 ref.current?.goNext(6);
@@ -183,7 +188,12 @@ export default function ResponsiveCarousel() {
   );
 }
 
-export const Card = React.memo(function (props) {
+interface CardProps {
+  data: DataItem[];
+  dataIndex: number;
+}
+
+export const Card = React.memo(function (props: CardProps) {
   const { data, dataIndex } = props;
   const { name, skills, experience, role, profileImage, flagImage } =
     data[dataIndex];

@@ -1,6 +1,15 @@
 import React from "react";
 
-const ProfileCard = ({
+interface ProfileCardProps {
+  name: string;
+  role: string;
+  experience: string;
+  skills: string[];
+  profileImage: string;
+  flagImage: string;
+}
+
+const ProfileCard: React.FC<ProfileCardProps> = ({
   name,
   role,
   experience,

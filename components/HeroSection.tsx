@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import ResponsiveCarousel from '../components/ResponsiveCarousel';
+import ResponsiveCarousel from './ResponsiveCarousel';
 import { ArrowDownIcon, DollarSignIcon } from 'lucide-react';
-import CheckBoxIcon from '../components/Icons/CheckBoxIcon';
-import MarqueeCard from '../components/MarqueeCard';
+import CheckBoxIcon from './Icons/CheckBoxIcon';
+import MarqueeCard from './MarqueeCard';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';

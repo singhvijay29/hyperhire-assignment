@@ -1,6 +1,14 @@
 import React from "react";
 
-const MarqueeCard = ({ index, item }) => {
+interface MarqueeCardProps {
+  index: number;
+  item: {
+    icon: () => JSX.Element;
+    name: string;
+  };
+}
+
+const MarqueeCard: React.FC<MarqueeCardProps> = ({ index, item }) => {
   return (
     <div
       key={index}
