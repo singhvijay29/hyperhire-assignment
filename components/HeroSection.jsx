@@ -1,41 +1,41 @@
-"use client";
-import React from "react";
-import ResponsiveCarousel from "../components/ResponsiveCarousel";
-import { ArrowDownIcon, DollarSignIcon } from "lucide-react";
-import CheckBoxIcon from "../components/Icons/CheckBoxIcon";
-import MarqueeCard from "../components/MarqueeCard";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import "swiper/css";
-import { Autoplay } from "swiper/modules";
-import Marketing from "./Icons/Marketing";
-import ImageIcon from "./Icons/ImageIcon";
-import Hexagon from "./Icons/Hexagon";
-import Targeting from "./Icons/Targeting";
-import CallIcon from "./Icons/CallIcon";
+'use client';
+import React from 'react';
+import ResponsiveCarousel from '../components/ResponsiveCarousel';
+import { ArrowDownIcon, DollarSignIcon } from 'lucide-react';
+import CheckBoxIcon from '../components/Icons/CheckBoxIcon';
+import MarqueeCard from '../components/MarqueeCard';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import 'swiper/css';
+import { Autoplay } from 'swiper/modules';
+import Marketing from './Icons/Marketing';
+import ImageIcon from './Icons/ImageIcon';
+import Hexagon from './Icons/Hexagon';
+import Targeting from './Icons/Targeting';
+import CallIcon from './Icons/CallIcon';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const marqueeData = [
   {
-    name: "해외 마케팅",
+    name: '해외 마케팅',
     icon: Marketing,
   },
   {
-    name: "퍼블리셔",
+    name: '퍼블리셔',
     icon: ImageIcon,
   },
   {
-    name: "캐드원(제도사)",
+    name: '캐드원(제도사)',
     icon: Hexagon,
   },
   {
-    name: "해외 세일즈",
+    name: '해외 세일즈',
     icon: Targeting,
   },
   {
-    name: "해외 세일즈",
+    name: '해외 세일즈',
     icon: CallIcon,
   },
 ];
@@ -47,9 +47,8 @@ const HeroSection = () => {
       style={{
         backgroundImage:
           "linear-gradient(151.17deg, rgba(38, 194, 185, 0.8) 8.69%, rgba(40, 139, 231, 0.8) 126.06%), url('https://s3-alpha-sig.figma.com/img/e9c5/52b8/d4c5da9953baca7f5d85f4d6f313f927?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FldTZT5gxr4dHqzu6i1iJf2ohzShiTp8c1FN5D8wG7qlvrFM7zCuiBTkuJHU9ovGnYxaBp1KOR5S86oB6DLYni965KhoI1rJvP-g7agy2Lu2V78MUQfYBP6RzKtMeeJh4t30H3XNLojqbI~6UyxEv4sWeJWJpx4XCTdATaMA2QBODD0rmW57VS28Wih0atuw6F0gn1EPUQKF1lrNTB70nyK-o03dOMOP8ORcyV3ketGjc2-svvcj~VXn2p3dSigAdcdxAvqYonOEp27hOo~-1fPGB7PMMJfsFQ2qQ4jKWRUSiBKIi4l9tF~BYqeWJnkJ38E7H-4w-yh68XiZMTSfdw__')",
-        backgroundSize: "cover",
-      }}
-    >
+        backgroundSize: 'cover',
+      }}>
       <main className="bg-gradient lg:pt-[132px] pt-[86px] text-white lg:pb-[108px] pb-[60px] max-w-[1440px] mx-auto font-poppins">
         <div className="grid lg:grid-cols-2 gap-4">
           <div>
@@ -75,30 +74,22 @@ const HeroSection = () => {
                 <br />
                 1주일 이내에 원격으로 채용해보세요.
               </div>
-              <div className="hidden lg:block text-[18px] underline">
-                개발자가 필요하신가요?
-              </div>
+              <div className="hidden lg:block text-[18px] underline">개발자가 필요하신가요?</div>
             </div>
 
             <div className="transition-opacity duration-500 opacity-0 animate-fadeIn">
               <div className="lg:grid hidden grid-cols-3 gap-[48px] mt-[60px] *:flex *:flex-col *:gap-2 *:border-t *:border-white *:pt-2">
                 <div>
                   <div className="font-[18px]">평균 월 120만원</div>
-                  <div className="font-[16px]">
-                    임금을 해당 국가를 기준으로 계산합니다.
-                  </div>
+                  <div className="font-[16px]">임금을 해당 국가를 기준으로 계산합니다.</div>
                 </div>
                 <div>
                   <div className="font-[18px]">최대 3회 인력교체</div>
-                  <div className="font-[16px]">
-                    막상 채용해보니 맞지 않아도 걱정하지 마세요.
-                  </div>
+                  <div className="font-[16px]">막상 채용해보니 맞지 않아도 걱정하지 마세요.</div>
                 </div>
                 <div>
                   <div className="font-[18px]">평균 3일, 최대 10일</div>
-                  <div className="font-[16px]">
-                    급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.
-                  </div>
+                  <div className="font-[16px]">급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.</div>
                 </div>
               </div>
             </div>
@@ -137,26 +128,23 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="block text-[18px] underline text-color-23">
-                개발자가 필요하신가요?
-              </div>
+              <div className="block text-[18px] underline text-color-23">개발자가 필요하신가요?</div>
             </div>
           </div>
         </div>
         <div className="hidden lg:flex lg:mt-10 mt-5 lg:mt-0 justify-center">
-          <div className="w-full">
+          <div className="w-full transition-opacity duration-500 opacity-0 animate-fadeIn">
             <Swiper
               slidesPerView="auto"
               slidesPerGroup={1}
               speed={600}
               autoplay
               loop
-              transition={"all 0.3s cubic-bezier(.4, 0, 0, 1)"}
-              direction={"horizontal"}
-              modules={[Autoplay]}
-            >
+              transition={'all 0.3s cubic-bezier(.4, 0, 0, 1)'}
+              direction={'horizontal'}
+              modules={[Autoplay]}>
               {marqueeData?.map((item, id) => (
-                <SwiperSlide key={item.id} style={{ width: "fit-content" }}>
+                <SwiperSlide key={item.id} style={{ width: 'fit-content' }}>
                   <MarqueeCard index={id} item={item} />
                 </SwiperSlide>
               ))}

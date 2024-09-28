@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/hyperhire_hq_logo.png" />
+        <link rel="icon" href="/hyperhire_hq_logo.jpeg" />
       </head>
       <body
         className={`${poppins.variable} antialiased`}
