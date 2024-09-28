@@ -4,7 +4,7 @@ import ResponsiveCarousel from './ResponsiveCarousel';
 import { ArrowDownIcon, DollarSignIcon } from 'lucide-react';
 import CheckBoxIcon from './Icons/CheckBoxIcon';
 import MarqueeCard from './MarqueeCard';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
@@ -15,7 +15,7 @@ import Hexagon from './Icons/Hexagon';
 import Targeting from './Icons/Targeting';
 import CallIcon from './Icons/CallIcon';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+SwiperCore.use([Autoplay]);
 
 const marqueeData = [
   {
@@ -140,11 +140,10 @@ const HeroSection = () => {
               speed={600}
               autoplay
               loop
-              transition={'all 0.3s cubic-bezier(.4, 0, 0, 1)'}
               direction={'horizontal'}
               modules={[Autoplay]}>
               {marqueeData?.map((item, id) => (
-                <SwiperSlide key={item.id} style={{ width: 'fit-content' }}>
+                <SwiperSlide key={id} style={{ width: 'fit-content' }}>
                   <MarqueeCard index={id} item={item} />
                 </SwiperSlide>
               ))}
